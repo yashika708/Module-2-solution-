@@ -18,23 +18,34 @@ h1{
 }
 .box{
     width: 100%;
-    overflow: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 4px solid black;
+    margin: 5px;
+    overflow: hidden;
+    box-sizing: border-box;
+    height: auto;
+}
+.container{
+    box-sizing: border-box;
 }
 .content-name{
     overflow: none;
     text-align: center;
     border: 4px solid black;
+    border-top: 0px;
+    border-right: 0px;
     width: 150px;
     height: 40px;
     padding: 5px;
     float: right;
-    margin-right: 25px;
     margin-top: 0px;
     font-weight: bold;
     position: relative;
 }
+.c{
+    border: 2px solid black;
+}
 .content{
-    border: 5px solid black;
     width: 90%;
     height: auto;
     margin: 2.5%;
@@ -42,7 +53,6 @@ h1{
     font-size: 25px;
     padding: 2%;
     padding-top: 55px;
-    background-color: rgba(0, 0, 0, 0.3);
 }
 .name1{
     background-color: #ff0044;
@@ -57,36 +67,28 @@ h1{
 
 /*****Large device only*****/
 @media(min-width: 992px) {
-    .col-lg-4{
+    .box{
+        width: 30%;
         float: left;
-        width: 33.33%;
+        height: 450px;
     }
 }
 /***** Medium device only*****/
 @media (min-width: 768px) and (max-width: 991px) {
-    .col-md-6, .col-md-12{
+    .box{
+        width: 48.5%;
         float: left;
+        height: 550px;
     }
-    .col-md-6{
-        width: 50%;
+    #third{
+        width: 98%;
     }
-    .col-md-12{
-        margin-left: -10px;
-        width: 100%;
-    }
-    .name3 {
-        margin-right: 31px;
-        width: 150px;
-
-    }
+    
 }
 /*****Small devices only*****/
 @media (min-width: 0px) and (max-width: 767px) {
-    .col-sm-12{
-        float:left;
-        width: 100%;
-    }
-    .content-name{
-        margin-right: 57px;
+   
+    .box{
+        margin: 10px;
     }
 }
